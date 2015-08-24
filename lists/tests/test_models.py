@@ -44,6 +44,13 @@ class ItemModelTest(TestCase):
         item = Item(text='some text')
         self.assertEqual(str(item), 'some text')
 
+    def test_duplicate_items_are_invalid(self):
+        list_ = List.objects.create()
+        Item.objects.create(list=list_, text='bla')
+        with self.assertRaises(ValidationError):
+            item = Item(list=list_, text='bla')
+            item.full_clean()
+
 
 class ListModelTest(TestCase):
 
