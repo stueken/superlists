@@ -21,14 +21,20 @@
     <script>
 /*global $, test, equal */
 
-test("errors should be hidden on keypress", function () {
-	$('input').trigger('keypress');
-	equal($('.has-error').is(':visible'), false);
+test("errors should be hidden on keypress", function() {
+ 	$('input[name="text"]').trigger('keypress')
+ 	equal($('.has-error').is(':visible'), false);
 });
 
-test("errors should not be hidden unless there is a keypress", function () {
-	equal($('.has-error').is(':visible'), true);
-})
+test("errors not be hidden unless there is a keypress", function() {
+    equal($('.has-error').is(':visible'), true);
+});
+
+test("errors should be hidden on click inside input", function() {
+     $('input[name="text"]').click()
+     equal($('.has-error').is(':visible'),false);
+});
+
     </script>
 
 </body>
