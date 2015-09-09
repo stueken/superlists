@@ -1,3 +1,4 @@
+import time
 from django.conf import settings
 from .base import FunctionalTest
 from .server_tools import create_session_on_server
@@ -50,6 +51,7 @@ class MyListsTest(FunctionalTest):
 
         # She logs out.  The "My lists" option disappears
         self.browser.find_element_by_id('id_logout').click()
+        time.sleep(0.5)  # just a quick fix
         self.assertEqual(
             self.browser.find_elements_by_link_text('My lists'),
             []
