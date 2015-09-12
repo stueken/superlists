@@ -73,4 +73,4 @@ class ListPage(object):
         self.wait_for_new_item_in_list(item_text, current_pos + 1)
 
     def get_list_owner(self):
-        return self.text.browser.find_element_by_id('id_list_owner').text
+        return self.test.browser.find_element_by_id('id_list_owner').text
