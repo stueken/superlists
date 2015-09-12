@@ -9,14 +9,16 @@ class MyListsTest(FunctionalTest):
 
         # She goes to the home page and starts a list
         self.browser.get(self.server_url)
-        self.get_item_input_box().send_keys('Reticulate splines\n')
-        self.get_item_input_box().send_keys('Immanentize eschaton\n')
+        self.wait_for(
+            lambda: self.get_item_input_box().send_keys('Reticulate splines\n')
+        )
+        self.wait_for(
+            lambda: self.get_item_input_box().send_keys('Immanentize eschaton\n')
+        )
         first_list_url = self.browser.current_url
 
         # She notices a "My lists" link, for the first time.
-        self.wait_for(
-            lambda: self.browser.find_element_by_link_text('My lists').click()
-        )
+        self.browser.find_element_by_link_text('My lists').click()
 
         # She sees that her list is in there, named according to its
         # first list item
