@@ -55,7 +55,7 @@ class SharingTest(FunctionalTest):
         # He adds an item to the list
         list_page.add_new_item('Hi Edith!')
 
-        # When Edith refreses the page, she sees Oniciferous's addition
+        # When Edith refreshes the page, she sees Oniciferous's addition
         self.browser = edith_browser
         self.browser.refresh()
         list_page.wait_for_new_item_in_list('Hi Edith!', 2)
