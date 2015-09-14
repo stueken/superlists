@@ -1,9 +1,10 @@
 # Superlists
-A ToDO-list app created on basis of the book [Test-Driven Development with Python](http://chimera.labs.oreilly.com/books/1234000000754) by Harry J.W. Percival.
+A To-Do list app created on basis of the book [Test-Driven Development with Python](http://chimera.labs.oreilly.com/books/1234000000754) by Harry J.W. Percival.
 
 You are welcome to try it out at http://superlists.nrbrt.com/
 
 ## Screenshots
+![My Lists](http://img5.fotos-hochladen.net/uploads/superlistsmyli06fbqxlsh5.jpg)
 
 ## Features
 
