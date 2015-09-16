@@ -14,8 +14,18 @@ You are welcome to try it out at http://superlists.nrbrt.com/
 - Fully responsive design
 
 ## Local setup instructions
-- Install packages from requirements.txt
-- tbd
+**Hint:** all CAPITALIZED words should be replaced with your individual terms.
+
+1. Create a folder for this site: `$ mkdir PROJECT_FOLDER`
+2. Change to the folder: `$ cd PROJECT_FOLDER`.
+3. Clone the GitHub-repository: `$ git clone https://github.com/stueken/superlists.git`
+4. Change to the repository folder: `$ cd superlists' (**Hint:** All commands in the following are based on this folder)
+5. Check if virtualenv is installed: `$ virtualenv --version`
+6. If not, install it: `$ sudo pip3 install virtualenv`
+7. Create a virtual environment: `$ virtualenv --python=python3 ../NAME_OF_VIRTUALENV`
+8. Activate the virtual environment: `$ source ../virtualenv/bin/activate`
+9. Install required packages: `$ pip install -r requirements.txt`
+
 
 ## Deployment (VPS)
 - tbd
