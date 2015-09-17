@@ -14,17 +14,14 @@ You are welcome to try it out at http://superlists.nrbrt.com/
 - Fully responsive design
 
 ## Local setup instructions
-**Hint:** all CAPITALIZED words should be replaced with your individual terms.
+This app is written and tested in Python 3, running it with Python 2 could lead to unforseen problems. All CAPITALIZED terms in the following instructions should be replaced with your individual terms.
 
-1. Create a folder for this site: `$ mkdir PROJECT_FOLDER`
-2. Change to the folder: `$ cd PROJECT_FOLDER`.
-3. Clone the GitHub-repository: `$ git clone https://github.com/stueken/superlists.git`
-4. Change to the repository folder: `$ cd superlists' (**Hint:** All commands in the following are based on this folder)
-5. Check if virtualenv is installed: `$ virtualenv --version`
-6. If not, install it: `$ sudo pip3 install virtualenv`
-7. Create a virtual environment: `$ virtualenv --python=python3 ../NAME_OF_VIRTUALENV`
-8. Activate the virtual environment: `$ source ../virtualenv/bin/activate`
-9. Install required packages: `$ pip install -r requirements.txt`
+1. Create a folder for this site: `$ mkdir PROJECT_FOLDER` and change to it: `$ cd PROJECT_FOLDER`.
+2. Clone the GitHub-repository: `$ git clone https://github.com/stueken/superlists.git` and change to the repository folder: `$ cd superlists` (**Hint:** All commands in the following are based on this folder)
+3. Install the latest version of Selenium, a browser automation tool, which is used for the functional tests: `$ sudo pip3 install --upgrade selenium`
+4. Check if virtualenv is installed: `$ virtualenv --version`. If not, install it: `$ sudo pip3 install virtualenv`
+5. Create a virtual environment: `$ virtualenv --python=python3 ../NAME_OF_VIRTUALENV` and activate it: `$ source ../virtualenv/bin/activate`
+6. Install required packages: `$ pip install -r requirements.txt`
 
 
 ## Deployment (VPS)
