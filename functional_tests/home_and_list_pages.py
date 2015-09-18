@@ -23,7 +23,9 @@ class HomePage(object):
         return list_page
 
     def go_to_my_lists_page(self):
-        self.test.browser.find_element_by_link_text('My lists').click()
+        return self.test.wait_for(
+            lambda: self.test.browser.find_element_by_link_text('My lists').click()
+        )
         self.test.wait_for(lambda: self.test.assertEqual(
             self.test.browser.find_element_by_tag_name('h1').text,
             'My Lists'
@@ -42,10 +44,10 @@ class ListPage(object):
 
     def wait_for_new_item_in_list(self, item_text, position):
         expected_row = '{}: {}'.format(position, item_text)
-        self.test.wait_for(lambda: self.test.assertIn(
+        self.test.assertIn(
             expected_row,
             [row.text for row in self.get_list_table_rows()]
-        ))
+        )
 
     def get_share_box(self):
         return self.test.browser.find_element_by_css_selector(
@@ -73,4 +75,6 @@ class ListPage(object):
         self.wait_for_new_item_in_list(item_text, current_pos + 1)
 
     def get_list_owner(self):
-        return self.test.browser.find_element_by_id('id_list_owner').text
+        return self.test.wait_for(
+            lambda: self.test.browser.find_element_by_id('id_list_owner').text
+        )
