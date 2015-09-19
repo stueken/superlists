@@ -22,6 +22,9 @@ This app is written and tested in Python 3, running it with Python 2 could lead 
 4. Check if virtualenv is installed: `$ virtualenv --version`. If not, install it: `$ sudo pip3 install virtualenv`
 5. Create a virtual environment: `$ virtualenv --python=python3 ../NAME_OF_VIRTUALENV` and activate it: `$ source ../virtualenv/bin/activate`
 6. Install required packages: `$ pip install -r requirements.txt`
+7. 
+- Run all tests (functional and unit) automatically with `python3 manage.py test`
+- If all goes well, start the test server with `python3 manage.py runserver``
 
 
 ## Deployment (VPS)
